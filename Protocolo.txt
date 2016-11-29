@@ -1,0 +1,28 @@
+Protocolo del servidor
+
+/usuarios/nuevo (post)
+{"user": "esteban", "pass": "123456"}
+-true: si se guarda
+-false: si ya existe user
+
+/usuarios/login (post)
+{"user": "esteban", "pass": "123"}
+-true: Datos correctos
+-False: User o pass incorrectos
+
+
+/leds (get)
+-{"led1": 0, "led2": 0, "led3": 0, "led4": 0 }
+
+/leds (post)
+{num: "1", valor: 1} 
+-true: cambio correcto
+-false: cambio incorrecto
+
+
+/puertas (get)
+-{"p1":0, "p2":1, "p3":1, "p4":0} (valor de puertas para cada una)
+
+
+/camara (get)
+-String base64 de la imagen
